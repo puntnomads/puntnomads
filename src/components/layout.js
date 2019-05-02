@@ -1,7 +1,18 @@
 import React from "react"
 import { Link } from "gatsby"
+import { SocialIcon } from "react-social-icons"
+import styled from "styled-components"
 
 import { rhythm, scale } from "../utils/typography"
+
+const Wrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  & > a {
+    box-shadow: none;
+  }
+`
 
 class Layout extends React.Component {
   render() {
@@ -13,7 +24,7 @@ class Layout extends React.Component {
       header = (
         <h1
           style={{
-            ...scale(1.5),
+            ...scale(0.75),
             marginBottom: rhythm(1.5),
             marginTop: 0,
           }}
@@ -63,9 +74,18 @@ class Layout extends React.Component {
         <header>{header}</header>
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <Wrapper>
+            <SocialIcon url="mailto:puntnomads@gmail.com" />
+            <SocialIcon
+              url="https://github.com/puntnomads"
+              bgColor="#000000"
+              target="_blank"
+            />
+            <SocialIcon
+              url="https://www.linkedin.com/in/zakariyamoallin"
+              target="_blank"
+            />
+          </Wrapper>
         </footer>
       </div>
     )
