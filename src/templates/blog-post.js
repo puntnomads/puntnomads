@@ -16,7 +16,7 @@ class BlogPostTemplate extends React.Component {
     const postTitle = post.frontmatter.title
     const postId = post.id
     const disqusConfig = {
-      shortname: process.env.GATSBY_DISQUS_NAME,
+      shortname: "puntnomads",
       config: {
         identifier: postId,
         title: postTitle,
