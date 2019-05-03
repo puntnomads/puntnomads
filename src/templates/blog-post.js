@@ -22,7 +22,6 @@ class BlogPostTemplate extends React.Component {
         title: postTitle,
       },
     }
-    console.log("disqusConfig: ", disqusConfig)
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
